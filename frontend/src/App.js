@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    notes: []
+  };
+
+  async componentDidMount() {
+    try {
+      const res = await fetch('http://127.0.0.1:8000/api/');
+      const notes = await res.json();
+      this.setState({
+        notes
+      });
+    }
+    catch (e) {
+        console.log(e);
+      }
+    }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="Poop">
+        <div className='Title'>
+        <h1> Note/Todo List </h1> 
+        </div>
+        {this.state.notes.map(item => (
+          <div className="note-card" key={item.id}>
+            <h1>{item.title}</h1>
+            <span>{item.description}</span>
+          </div>
+        ))}
       </div>
     );
   }

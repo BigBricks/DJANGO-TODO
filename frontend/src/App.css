@@ -1,3 +1,6 @@
+.html{
+  background-color: green;
+}
 .App {
   text-align: center;
 }
@@ -20,6 +23,35 @@
 
 .App-intro {
   font-size: large;
+}
+.Poop {
+  background-image: url("https://media.giphy.com/media/xTiQyNEY3kQ8r7WKFq/giphy.gif");
+  height: 1080px;
+}
+.Title{
+  background-color: #a4f129;
+  border: 0;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  top: 10px;
+  margin: auto;
+  width: 35%;
+}
+.note-card {
+  background-color: #47e4f0;
+  border: 0;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  margin: 2rem auto;
+  width: 35%;
 }
 
 @keyframes App-logo-spin {
